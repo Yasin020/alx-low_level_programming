@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE="example.c" ; cpp $FILE > c
+gcc -E $CFILE -o $OUTPUT
