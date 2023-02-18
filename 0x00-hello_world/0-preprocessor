@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    // Set the name of the C file
+    const char *cfile = "example.c";
+
+    // Open the C file for reading
+    FILE *fp = fopen(cfile, "r");
+    if (fp == NULL) {
+        perror("Error opening file");
+        exit(EXIT_FAILURE);
+    }
+
+    // Open the output file for writing
+    FILE *outfp = fopen("c", "w");
+    if (outfp == NULL) {
+        perror("Error opening output file");
+        exit(EXIT_FAILURE);
+    }
